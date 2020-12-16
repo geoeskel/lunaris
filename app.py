@@ -26,7 +26,28 @@ def get_movies():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        #checking if user already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        
+        if existing_user:
+            flash("This username already exist")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        #putting a new user into the temp session cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Thanks for registering!")
     return render_template("register.html")
+
+
+
 
 
 if __name__ == "__main__":
