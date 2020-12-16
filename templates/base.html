@@ -25,19 +25,22 @@
             <li><a href="{{ url_for('get_movies') }}">Home</a></li>
             <li><a href="#">Add Movie</a></li>
             <li><a href="#">My Library</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>       
+            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>       
+            <li><a href="#">Log Out</a></li>       
          </ul>
       </div>
    </nav>
 
    <!-- mobile sidenav -->
    <ul class="sidenav" id="mobile-demo">
+        <li><h4 class="center-align light-blue-text text-darken-4">Lunaris Library</h4></li>
         <li><a href="{{ url_for('get_movies') }}">Home</a></li>
         <li><a href="#">Add Movie</a></li>
         <li><a href="#">My Library</a></li>
         <li><a href="#">Login</a></li>
-        <li><a href="#">Register</a></li>    
+        <li><a href="{{ url_for('register') }}">Register</a></li>    
+        <li><a href="#">Log Out</a></li>    
    </ul>
 </header>
     
