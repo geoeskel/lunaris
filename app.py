@@ -17,10 +17,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+@app.route("/get_movies")
+def get_movies():
+    movies = mongo.db.movies.find()
+    return render_template("movies.html", movies=movies)
 
 
 if __name__ == "__main__":
