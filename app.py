@@ -27,12 +27,12 @@ def get_movies():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #checking if user already exists
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
-            flash("This username already exist")
+            flash("Username already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -41,12 +41,61 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        #putting a new user into the temp session cookie
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Thanks for registering!")
+        flash("Registration Successful!")
+        return redirect(url_for("library", username=session["user"]))
+
     return render_template("register.html")
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check if username exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # check if hashed password matches the one typed by the user
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "library", username=session["user"]))
+            else:
+                # incorrect password
+                flash("The username and/or password you provided are not correct. Pleast try again.")
+                return redirect(url_for("login"))
+
+        else:
+            # incorrect user
+            flash("The username and/or password you provided are not correct. Pleast try again.")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
+@app.route("/library/<username>", methods=["GET", "POST"])
+def library(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        return render_template("library.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # Delete user's cookies from the session 
+    flash("You have logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 
