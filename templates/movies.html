@@ -6,8 +6,25 @@
         {{ movie.genre_name }}<br>
         {{ movie.source_name }}<br>
         {{ movie.rating_value }}<br>
-        {{ movie.user_notes }}<br>
-        
+        {{ movie.user_notes }}<br>        
     {% endfor %}
+
+    <ul class="collapsible">
+        {% for movie in movies %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ movie.movie_name }}</strong>
+            </div>
+            <div class="collapsible-body">
+                <p><strong>Movie genre:</strong> {{ movie.genre_name }}</p>
+                <p><strong>You can watch it on:</strong> {{ movie.source_name }}</p>
+                <p><strong>Lunaris rating:</strong> {{ movie.rating_value }}</p>
+                <p><strong>Anything interesting about it?</strong> {{ movie.user_notes }}</p>
+            </div>
+        </li>
+       {% endfor %}
+  </ul>
     
 {% endblock %}
+
