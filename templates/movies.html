@@ -1,13 +1,7 @@
 {% extends "base.html" %}
 {% block content %}   
 
-   {% for movie in movies %}
-        {{ movie.movie_name }}<br>
-        {{ movie.genre_name }}<br>
-        {{ movie.source_name }}<br>
-        {{ movie.rating_value }}<br>
-        {{ movie.user_notes }}<br>        
-    {% endfor %}
+   
 
     <ul class="collapsible">
         {% for movie in movies %}
@@ -21,6 +15,7 @@
                 <p><strong>You can watch it on:</strong> {{ movie.source_name }}</p>
                 <p><strong>Lunaris rating:</strong> {{ movie.rating_value }}</p>
                 <p><strong>Anything interesting about it?</strong> {{ movie.user_notes }}</p>
+                <p><em>by: {{ movie.created_by }}</em></p>
             </div>
         </li>
        {% endfor %}

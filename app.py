@@ -98,13 +98,26 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_movie")
+@app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
+    if request.method == "POST":
+        movie = {
+            "movie_name": request.form.get("movie_name"),
+            "genre_name": request.form.get("genre_name"),
+            "source_name": request.form.get("source_name"),
+            "rating_value": request.form.get("rating_value"),
+            "created_by": session["user"]
+        }
+        mongo.db.movies.insert_one(movie)
+        flash("Movie added to Lunaris Library")
+        return redirect(url_for("get_movies"))
+
     genre = mongo.db.genre.find().sort("genre_name", 1)
-    source_name = mongo.db.available_on.find().sort("source_name", 1)
+    source_name = mongo.db.source.find().sort("source_name", 1)
     rating_value = mongo.db.ratings.find().sort("rating_value", 1)
     return render_template(
-        "add_movie.html", genre=genre, source_name=source_name, rating_value=rating_value)
+        "add_movie.html", genre=genre,
+        source_name=source_name, rating_value=rating_value)
 
 
 if __name__ == "__main__":
