@@ -98,6 +98,14 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add_movie")
+def add_movie():
+    genre = mongo.db.genre.find().sort("genre_name", 1)
+    source_name = mongo.db.available_on.find().sort("source_name", 1)
+    rating_value = mongo.db.ratings.find().sort("rating_value", 1)
+    return render_template(
+        "add_movie.html", genre=genre, source_name=source_name, rating_value=rating_value)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

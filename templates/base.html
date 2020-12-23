@@ -24,7 +24,7 @@
          <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('get_movies') }}">Home</a></li>            
             {% if session.user %}
-                <li><a href="#">Add Movie</a></li>
+                <li><a href="{{ url_for('add_movie') }}">Add Movie</a></li>
                 <li><a href="{{ url_for('library', username=session['user']) }}">My Library</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}    
