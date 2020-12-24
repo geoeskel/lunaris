@@ -140,7 +140,13 @@ def edit_movie(movie_id):
     return render_template(
         "edit_movie.html", movie=movie, genre=genre,
         source_name=source_name, rating_value=rating_value)
-   
+
+
+@app.route("/delete_movie/<movie_id>")
+def delete_movie(movie_id):
+      mongo.db.movies.remove({"_id": ObjectId(movie_id)})
+      flash("Movie deleted from the Library")
+      return redirect(url_for("get_movies"))
 
 
 if __name__ == "__main__":
