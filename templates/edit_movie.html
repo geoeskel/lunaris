@@ -10,7 +10,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-film prefix light-blue-text text-darken-4"></i>
-                <input id="movie_name" name="movie_name" type="text" class="validate">
+                <input id="movie_name" name="movie_name" type="text" class="validate"
+                    value="{{ movie.movie_name }}">
                 <label for="movie_name">Title</label>
             </div>
         </div>
@@ -21,7 +22,11 @@
                 <select class="validate" id="genre_name" name="genre_name" required>
                     <option value="" disabled selected>Select movie genre</option>
                     {% for genre in genre %}
-                    <option value="{{ genre.genre_name }}" class="left">{{ genre.genre_name }}</option>
+                        {% if genre.genre_name == movie.genre_name %}
+                            <option value="{{ genre.genre_name }}" selected class="left">{{ genre.genre_name }}</option>
+                        {% else %}
+                            <option value="{{ genre.genre_name }}" class="left">{{ genre.genre_name }}</option>
+                        {% endif %}                    
                     {% endfor %}
                 </select>
                 <label for="genre_name">Genres</label>
@@ -35,7 +40,11 @@
                 <select class="validate" id="source_name" name="source_name" required>
                     <option value="" disabled selected>Where can you watch the movie?</option>
                     {% for source_name in source_name %}
-                    <option value="{{ source_name.source_name }}" class="left">{{ source_name.source_name }}</option>
+                        {% if source_name.source_name == movie.source_name %}
+                            <option value="{{ source_name.source_name }}" selected class="left">{{ source_name.source_name }}</option>
+                        {% else %}
+                            <option value="{{ source_name.source_name }}" class="left">{{ source_name.source_name }}</option>
+                        {% endif %}     
                     {% endfor %}
                 </select>
                 <label for="source_name">Available on</label>
@@ -49,8 +58,11 @@
                 <select class="validate" id="rating_value" name="rating_value" required>
                     <option value="" disabled selected>How do you rate this movie?</option>
                     {% for rating_value in rating_value %}
-                    <option value="{{ rating_value.rating_value }}" class="left">{{ rating_value.rating_value }}
-                    </option>
+                        {% if rating_value.rating_value == movie.rating_value %}
+                            <option value="{{ rating_value.rating_value }}" selected class="left">{{ rating_value.rating_value }}</option>
+                        {% else %}
+                            <option value="{{ rating_value.rating_value }}" selected class="left">{{ rating_value.rating_value }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="rating_value">Your rating</label>
@@ -60,6 +72,10 @@
         <!-- Button submit -->
         <div class="row">
             <div class="col s12 center-align">
+                <!-- Button cancel -->
+                <a href="{{ url_for('get_movies') }}" class="btn waves-effect waves-light">
+                    Back <i class="fas fa-times-circle right"></i>
+                </a>
                 <button class="btn waves-effect waves-light" type="submit">Edit movie
                     <i class="fas fa-edit right"> </i>
                 </button>
