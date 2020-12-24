@@ -120,6 +120,18 @@ def add_movie():
         source_name=source_name, rating_value=rating_value)
 
 
+@app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
+def edit_movie(movie_id):    
+    movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    genre = mongo.db.genre.find().sort("genre_name", 1)
+    source_name = mongo.db.source.find().sort("source_name", 1)
+    rating_value = mongo.db.ratings.find().sort("rating_value", 1)
+    return render_template(
+        "edit_movie.html", movie=movie, genre=genre,
+        source_name=source_name, rating_value=rating_value)
+   
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
