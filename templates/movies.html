@@ -21,6 +21,7 @@
         </form>
     </div>
 
+    {% if movies|length > 0 %}
     <ul class="collapsible">
         {% for movie in movies %}
         <li>
@@ -47,6 +48,9 @@
         </li>
        {% endfor %}
   </ul>
+  {% else %}
+        <h4 class="red-text text-darken-4 center-align">Nothing Found</h3>
+  {% endif %}
     
 {% endblock %}
 
