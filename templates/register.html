@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Sign In</h3>
+    <h3 class="center-align title">Sign In</h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
                 <!-- Username -->
                 <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+					<div class="input-field col s12">						
 						<input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 						<label for="username">Username</label>
@@ -17,8 +16,7 @@
                 </div>
                 <!-- Passowrd -->
                 <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
+                    <div class="input-field col s12">						
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
@@ -26,9 +24,7 @@
                 </div>
                 <!-- Sign In -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Sign In <i class="fas fa-sign-in-alt"></i>
-                    </button>
+                    <button type="submit" class="col s12 btn-large">Sign In</button>
                 </div>
             </div>
         </form>
@@ -36,7 +32,7 @@
 
     <div class="row">
         <div class="col s12">
-            <p class="center-align">
+            <p class="center-align foot">
                 Do you already have an account?
                 <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In</a>
             </p>

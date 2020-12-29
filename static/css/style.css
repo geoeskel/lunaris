@@ -1,5 +1,27 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(205, 187, 255, 0.5);
+body {
+    background-image: url('https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+    font-family: 'Cinzel', serif;
+}
+
+.collapsible-body {
+    background-color: #CC9E7E;
+    color: #0D1F1F;    
+}
+
+.nav-wrapper {
+    background-color: #0D1F1F;
+}
+
+.right {
+    color: #6C231D;
+    
+}
+
+.brand-logo {
+    margin-left: 10px;    
+    -webkit-text-stroke: 1px #F79F45;
+    text-shadow: 2px 2px 2px #0D1F1F;
+    color: #6C231D;
 }
 
 .flash_messages {
@@ -8,11 +30,59 @@
 
 .btn-small {
     margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #0D1F1F;
+}
+
+.collapsible-header {
+    background-color: #6C231D;
+    color: #FBEBD0;
 }
 
 .collapsible-header .col-strong {
     margin: 5px;
     line-height: 42px;
+}
+
+.card-panel {
+    background-color: #6C231D;
+    color: #FBEBD0;
+}
+
+.btn {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #0D1F1F;
+}
+
+.btn-large {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #0D1F1F;
+}
+
+.title {
+    color: #FBEBD0;
+    -webkit-text-stroke: 1px #FBEBD0;
+    text-shadow: 5px 5px 5px #0D1F1F;
+}
+
+.flash {
+    color: #CC9E7E;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.foot {
+    color: #FBEBD0;
+    text-shadow: 3px 3px 3px #FBEBD0;    
+}
+
+.row {
+    text-shadow: 1px 1px 1px #0D1F1F;
 }
 
 #movie-title {

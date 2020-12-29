@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-@app.route("/")
+
 @app.route("/get_movies")
 def get_movies():
     movies = list(mongo.db.movies.find())
@@ -92,7 +92,8 @@ def library(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("library.html", username=username)
+        movies = list(mongo.db.movies.find())
+        return render_template("library.html", username=username, movies=movies)
 
     return redirect(url_for("login"))
 

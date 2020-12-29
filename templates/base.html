@@ -9,6 +9,9 @@
     <!-- Compiled and minified CSS from Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+
     {% block styles %}
     {% endblock %}
     <title>Lunaris Library</title>
@@ -17,7 +20,7 @@
 
 <header>
     <!-- top navbar -->
-   <nav class="nav-extended text-shadow deep-purple darken-4">
+   <nav class="nav-extended">
       <div class="nav-wrapper">
          <a href="{{ url_for('get_movies') }}" class="brand-logo">Lunaris Library</a>
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="far fa-moon"></i></a>
@@ -56,7 +59,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flash_messages">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                        <h4 class="center-align flash">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}

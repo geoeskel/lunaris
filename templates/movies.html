@@ -1,21 +1,18 @@
 {% extends "base.html" %}
 {% block content %}   
 
-    <h3 class="ligh-blue-text text-darken-4 center-align"></h3>
+    <h3 class="center-align title">All Movies</h3>
 
-    <div class="row card-panel grey lighten-5">
+    <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
             <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <div class="input-field col s12 m8">                    
+                    <input type="text" name="query" id="query" minlength="1" class="validate" required>
                     <label for="query">Search Movies</label>
                 </div>
                 <div class="col s12 m4">
-                    <a href="{{ url_for('get_movies') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
+                    <a href="{{ url_for('get_movies') }}" class="btn">Reset</a>
+                    <button type="submit" class="btn">Search</button>
                 </div>
             </div>
         </form>
@@ -25,15 +22,10 @@
     <ul class="collapsible">
         {% for movie in movies %}
         <li>
-            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <div class="collapsible-header">
                 <div class="col s3">
-                    <i class="fas fa-caret-down"></i>
-                        {% if session.user|lower == movie.created_by|lower %}
-                    <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn-small accent-4 blue lighten-1">Edit</a>
-                    <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small accent-4 blue lighten-1">Delete</a>
-                    {% endif %}
+                    <i class="fas fa-caret-down"></i>                        
                 </div>
-
                 <div id="movie-title" class="col s9">
                     <strong>{{ movie.movie_name }}</strong>
                 </div>
@@ -41,8 +33,7 @@
             <div class="collapsible-body">
                 <p><strong>Movie genre:</strong> {{ movie.genre_name }}</p>
                 <p><strong>You can watch it on:</strong> {{ movie.source_name }}</p>
-                <p><strong>Lunaris rating:</strong> {{ movie.rating_value }}</p>
-                <p><strong>Anything interesting about it?</strong> {{ movie.user_notes }}</p>
+                <p><strong>Lunaris rating:</strong> {{ movie.rating_value }}</p>                
                 <p><em>by: {{ movie.created_by }}</em></p>
             </div>
         </li>

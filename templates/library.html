@@ -4,11 +4,34 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
-                <h3 class="center-align light-blue-text text-darken 4">
+                <h3 class="center-align">
                     {{ username }}'s Profile
                 </h3>
             </div>
-        </div>
+        </div> 
     </div>
 
+    <h3 class="center-align title">Your Movies</h3>
+    {% for movie in movies %}
+        {% if session.user|lower == movie.created_by|lower %}
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">{{ movie.movie_name }}
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>                        
+                        <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn-small right">Edit</a>
+                        <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small right">Delete</a>
+                </div>
+            </div>
+                
+            <div class="collapsible-body">
+                <p><strong>Movie genre:</strong> {{ movie.genre_name }}</p>
+                <p><strong>You can watch it on:</strong> {{ movie.source_name }}</p>
+                <p><strong>Lunaris rating:</strong> {{ movie.rating_value }}</p>         
+            </div>
+        </li>
+        {% endif %}
+
+    </ul>
+   {% endfor %}
 {% endblock %}
