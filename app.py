@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+@app.route("/")
 @app.route("/get_movies")
 def get_movies():
     movies = list(mongo.db.movies.find())
