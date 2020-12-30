@@ -202,7 +202,20 @@ input {
     color: #FBEBD0;
 }
 
+.mobile {
+    background-color: #6C231D;
+    color: #FBEBD0;
+}
 
+.sidenav li>a {
+    color: #FBEBD0;
+}
 
+.sidenav li>a:hover {
+    background-color: #FBEBD0;
+    color: #0D1F1F;
+}
 
-
+.fa-book {
+    color: #FBEBD0;
+}

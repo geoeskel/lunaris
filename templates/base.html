@@ -23,8 +23,8 @@
     <!-- top navbar -->
    <nav class="nav-extended">
       <div class="nav-wrapper">
-         <a href="{{ url_for('get_movies') }}" class="brand-logo">Lunaris Library</a>
-         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+         <a href="{{ url_for('get_movies') }}" class="brand-logo">Lunaris</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-book"></i></a>
          <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('get_movies') }}">Home</a></li>            
             {% if session.user %}
@@ -40,8 +40,8 @@
    </nav>
 
    <!-- mobile sidenav -->
-   <ul class="sidenav" id="mobile-demo">
-        <li><h3 class="center-align light-blue-text">Lunaris</h3></li>
+   <ul class="sidenav mobile" id="mobile-demo">
+        <li><h4 class="center-align mobile">Lunaris</h4></li>
         <li><a href="{{ url_for('get_movies') }}">Home</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('add_movie') }}">Add Movie</a></li>
