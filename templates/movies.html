@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}   
 
-    <h3 class="center-align title animate__animated animate__flipInX">All Movies</h3>
-
-    
+    <h3 class="center-align title animate__animated animate__flipInX">All Movies</h3> 
 
     <div class="row card-panel">
-        <form action="{{ url_for('search') }}" method="POST" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">                    
-                    <input type="text" name="query" id="query" minlength="1" class="validate" required>
-                    <label for="query">Search Movies</label>
+        <h4 class="center-align">Welcome to Lunaris Library</h4>        
+        <p class="center-align">Add your favourite movies & series, you'll never forget them again!</p>   
+            <form action="{{ url_for('search') }}" method="POST" class="col s12">
+                <div class="row valign-wrapper center-align">
+                    <div class="input-field col s12 m8">                    
+                        <input type="text" name="query" id="query" minlength="1" class="validate" required>
+                        <label for="query">Search Movies</label>
+                    </div>
+                    <div class="col s12 m4">
+                        <a href="{{ url_for('get_movies') }}" class="btn">Reset</a>
+                        <button type="submit" class="btn">Search</button>
+                    </div>
                 </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_movies') }}" class="btn">Reset</a>
-                    <button type="submit" class="btn">Search</button>
-                </div>
-            </div>
-        </form>
+            </form>
     </div>
 
     {% if movies|length > 0 %}
