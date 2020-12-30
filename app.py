@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -17,6 +17,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+###############################################
+# Routes
+
+# Home page
 @app.route("/")
 @app.route("/get_movies")
 def get_movies():
@@ -24,6 +28,7 @@ def get_movies():
     return render_template("movies.html", movies=movies)
 
 
+# Search function on Home Page
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -31,6 +36,7 @@ def search():
     return render_template("movies.html", movies=movies)
 
 
+# Register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -56,6 +62,7 @@ def register():
     return render_template("register.html")
 
 
+# Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -74,17 +81,18 @@ def login():
                             "library", username=session["user"]))
             else:
                 # incorrect password
-                flash("The username and/or password you provided are not correct. Pleast try again.")
+                flash("The username/password are incorrect. Pleast try again.")
                 return redirect(url_for("login"))
 
         else:
             # incorrect user
-            flash("The username and/or password you provided are not correct. Pleast try again.")
+            flash("The username/password are incorrect. Pleast try again.")
             return redirect(url_for("login"))
 
     return render_template("login.html")
 
 
+# User profile page
 @app.route("/library/<username>", methods=["GET", "POST"])
 def library(username):
     # grab the session user's username from db
@@ -93,19 +101,22 @@ def library(username):
 
     if session["user"]:
         movies = list(mongo.db.movies.find())
-        return render_template("library.html", username=username, movies=movies)
+        return render_template(
+            "library.html", username=username, movies=movies)
 
     return redirect(url_for("login"))
 
 
+# Logout page
 @app.route("/logout")
 def logout():
-    # Delete user's cookies from the session 
+    # Delete user's cookies from the session
     flash("You have logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
+#Add movie page
 @app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
     if request.method == "POST":
@@ -128,6 +139,7 @@ def add_movie():
         source_name=source_name, rating_value=rating_value)
 
 
+# Edit movie in user profile page
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
     if request.method == "POST":
@@ -150,14 +162,16 @@ def edit_movie(movie_id):
         source_name=source_name, rating_value=rating_value)
 
 
+# Delete movie in user profile page
 @app.route("/delete_movie/<movie_id>")
 def delete_movie(movie_id):
-      mongo.db.movies.remove({"_id": ObjectId(movie_id)})
-      flash("Movie deleted from the Library")
-      return redirect(url_for("get_movies"))
+    mongo.db.movies.remove(
+        {"_id": ObjectId(movie_id)})
+    flash("Movie deleted from the Library")
+    return redirect(url_for("get_movies"))
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

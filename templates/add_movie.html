@@ -9,14 +9,14 @@
         <!-- Movie name -->
         <div class="row">
             <div class="input-field col s12">                
-                <input id="movie_name" name="movie_name" type="text" minlength="5" class="validate" required>
+                <input id="movie_name" name="movie_name" type="text" minlength="1" class="validate" required>
                 <label for="movie_name">Title</label>
             </div>
         </div>
         <!-- Pick genre  -->
         <div class="row">
             <div class="input-field col s12 m6">
-                <select class="validate" id="genre_name" name="genre_name" required>
+                <select class="validate" id="genre_name" name="genre_name">
                     <option value="" disabled selected>Select movie genre</option>
                     {% for genre in genre %}
                     <option value="{{ genre.genre_name }}" class="left">{{ genre.genre_name }}</option>
@@ -29,7 +29,7 @@
         <!-- Pick source -->
         <div class="row">
             <div class="input-field col s12 m6">
-                <select multiple class="validate" id="source_name" name="source_name" required>
+                <select multiple class="validate" id="source_name" name="source_name">
                     <option value="" disabled>Where can you watch the movie?</option>
                     {% for source_name in source_name %}
                     <option value="{{ source_name.source_name }}" class="left">{{ source_name.source_name }}</option>
@@ -42,7 +42,7 @@
         <!-- Pick rating -->
         <div class="row">
             <div class="input-field col s12 m6">
-                <select class="validate" id="rating_value" name="rating_value" required>
+                <select class="validate" id="rating_value" name="rating_value">
                     <option value="" disabled selected>How do you rate this movie?</option>
                     {% for rating_value in rating_value %}
                     <option value="{{ rating_value.rating_value }}" class="left">{{ rating_value.rating_value }}

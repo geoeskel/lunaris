@@ -7,10 +7,227 @@ body {
     background-color: #CC9E7E;
     color: #0D1F1F;    
 }
+body {
+    background-image: url('https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+    font-family: 'Cinzel', serif;
+}
+
+.collapsible-body {
+    background-color: #CC9E7E;
+    color: #0D1F1F;    
+}
 
 .nav-wrapper {
     background-color: #0D1F1F;
     color: #0D1F1F;
+}
+
+.right {
+    color: #6C231D;
+    
+}
+
+input {
+    font-family: 'Cinzel', serif;
+    color: #FBEBD0;
+}
+
+.brand-logo {
+    margin-left: 10px;    
+    -webkit-text-stroke: 1px #F79F45;
+    text-shadow: 2px 2px 2px #0D1F1F;
+    color: #6C231D;
+}
+
+.flash_messages {
+    line-height: 3;
+}
+
+.collapsible-header {
+    background-color: #6C231D;
+    color: #FBEBD0;
+}
+
+.collapsible-header .col-strong {
+    margin: 5px;
+    line-height: 42px;
+}
+
+.card-panel {
+    background-color: #6C231D;
+    color: #FBEBD0;
+}
+
+.btn {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    margin: 5px;
+}
+
+.btn-small {
+    margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn-large {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
+}
+
+.btn-small:hover {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn:active {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
+}
+
+.btn-small:active {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:active {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn:focus {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    margin: 5px;    
+}
+
+.btn-small:focus {
+    margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;    
+}
+
+.btn-large:focus {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;    
+}
+
+.btn:focus-within {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
+}
+
+.btn-small:focus-within  {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:focus-within  {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.title {
+    color: #FBEBD0;
+    -webkit-text-stroke: 1px #FBEBD0;
+    text-shadow: 5px 5px 5px #0D1F1F;
+}
+
+.flash {
+    color: #FBEBD0;
+    text-shadow: 3px 3px 3px #F79F45;
+    animation: heartBeat;    
+}
+
+.foot {
+    color: #FBEBD0;
+    text-shadow: 1px 1px 1px #FBEBD0;    
+}
+
+#movie-title {
+    padding-top: 10px;
+}
+
+#fact {
+    background-color: #CC9E7E;
+    padding: 5px;
+    color: #0D1F1F;        
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #0D1F1F;
+    background-color: #FBEBD0;
+}
+
+.dropdown-content li>a:hover, .dropdown-content li>span:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+}
+
+.mobile {
+    background-color: #6C231D;
+    color: #FBEBD0;
+}
+
+.sidenav li>a {
+    color: #FBEBD0;
+}
+
+.sidenav li>a:hover {
+    background-color: #FBEBD0;
+    color: #0D1F1F;
+}
+
+.fa-book {
+    color: #FBEBD0;
+}
+
+
+.nav-wrapper {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
 }
 
 .right {
