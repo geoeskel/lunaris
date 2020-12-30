@@ -174,7 +174,7 @@ input {
 
 .foot {
     color: #FBEBD0;
-    text-shadow: 3px 3px 3px #FBEBD0;    
+    text-shadow: 1px 1px 1px #FBEBD0;    
 }
 
 #movie-title {
@@ -214,3 +214,4 @@ input {
 .fa-book {
     color: #FBEBD0;
 }
+
