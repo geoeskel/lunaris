@@ -10,11 +10,16 @@ body {
 
 .nav-wrapper {
     background-color: #0D1F1F;
+    color: #0D1F1F;
 }
 
 .right {
     color: #6C231D;
     
+}
+
+input {
+    font-family: 'Cinzel', serif;
 }
 
 .brand-logo {
@@ -26,14 +31,6 @@ body {
 
 .flash_messages {
     line-height: 3;
-}
-
-.btn-small {
-    margin: 5px;
-    background-color: #F79F45;
-    color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    text-shadow: 1px 1px 1px #0D1F1F;
 }
 
 .collapsible-header {
@@ -55,25 +52,146 @@ body {
     background-color: #F79F45;
     color: #0D1F1F;
     font-family: 'Cinzel', serif;
-    text-shadow: 1px 1px 1px #0D1F1F;
+    
+}
+
+.btn-small {
+    margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
 }
 
 .btn-large {
     background-color: #F79F45;
     color: #0D1F1F;
     font-family: 'Cinzel', serif;
-    text-shadow: 1px 1px 1px #0D1F1F;
+    
+}
+
+.btn:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-small:hover {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn:active {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-small:active {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:active {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn:visited {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn-small:visited {
+    margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn-large:visited {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn:focus {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn-small:focus {
+    margin: 5px;
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn-large:focus {
+    background-color: #F79F45;
+    color: #0D1F1F;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.btn:focus-within {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-small:focus-within  {
+    margin: 5px;
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
+}
+
+.btn-large:focus-within  {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px #FBEBD0;
 }
 
 .title {
     color: #FBEBD0;
     -webkit-text-stroke: 1px #FBEBD0;
     text-shadow: 5px 5px 5px #0D1F1F;
+
 }
 
 .flash {
-    color: #CC9E7E;
-    text-shadow: 1px 1px 1px #FBEBD0;
+    color: #FBEBD0;
+    text-shadow: 3px 3px 3px #F79F45;
+    animation: heartBeat;
+    
 }
 
 .foot {
@@ -81,10 +199,20 @@ body {
     text-shadow: 3px 3px 3px #FBEBD0;    
 }
 
-.row {
-    text-shadow: 1px 1px 1px #0D1F1F;
-}
-
 #movie-title {
     padding-top: 10px;
+}
+
+#quoteDisplay {
+    font-style: italic;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #0D1F1F;
+    background-color: #FBEBD0;
+}
+
+.dropdown-content li>a:hover, .dropdown-content li>span:hover {
+    background-color: #0D1F1F;
+    color: #FBEBD0;
 }

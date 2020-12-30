@@ -1,0 +1,42 @@
+var quotes = [
+    'In the 18th century, wealthy British landowners hired ornamental hermits to live in their gardens.',
+    'We invented booze before we invented the wheel.',
+    'Beethoven went out of his way to ensure his morning coffee was made with exactly 60 beans per cup.',
+    'Blood donors in Sweden receive a thank you text when their blood is used.',
+    'Maine is the U.S. state closest to Africa.',
+    'Almonds and peaches are members of the same family.',
+    'Bangladesh has six seasons: Grishmo (summer), Borsha (rainy), Shorot (fall), Hemanta (cool), Sheet (winter), and Boshanto (spring).',
+    'Sorry, Scotland: Persians invented bagpipes.',
+    'Sleeping through summer is called estivation.',
+    'Londoners in the 1600s were advised to keep "fart jars"—consisting of trapped fart odors—on hand to combat bubonic plague. The idea was that the potent smell would somehow purify the air.',
+    'Queen Elizabeth II technically owns all the dolphins in UK waters.',
+    'Blue whales may weigh up to twice as much as the largest dinosaur.',
+    'Newborn elephants suck their trunks for comfort.',
+    'Bubble gum is pink because that was the only food dye available in the factory where it was made.',
+    'Since founding the Imagination Library in 1995, Dolly Parton has donated 100 million books to children.',
+    'Louis Braille was 12 years old when he began transforming a method of silent communication used by the French military into a language that allows blind people to read.',
+    'Cleopatra had a special lipstick made for her, consisting of a crushed mixture of ants and deep red carmine beetles.',
+    'According to NASA, it possibly rains glass on the planet known as HD 189733b.',
+    'The second largest country by area is Canada, after Russia.',
+    'Before he became president, Abraham Lincoln was wrestling champion of his county in Illinois. He fought in nearly 300 matches and lost only one.',
+    'Wyoming state is home to only two escalators.',
+    'A Canadian police officer named Ward Clapham created a program that gives “positive tickets” to people who do good deeds.',
+    'Hippopotomonstrosesquippedaliophobia is the fear of long words.',
+    'Beauty and the Beast was the first animated film to be nominated for Best Picture. It lost to The Silence of the Lambs.',
+    'Staff members of the Slovak and Slovenian embassies meet once a month to exchange incorrectly addressed mail.',
+    'The word dude originated in the 1800s as an insult to men overly concerned with the latest fashion trends.',
+    'Pentheraphobia is the intense and disproportionate fear of your mother-in-law.',
+    'The towns of Baarle straddle the Dutch-Belgian border. In some places, the official border line cuts through houses and cafes.',
+    'A cough can propel saliva droplets as far as 20 feet at speeds up to 40 to 80 km/h.',
+    'There was a third Apple founder. Ronald Wayne sold his 10 percent stake for $800 in 1976.',
+    'Nintendo was founded in 1889. Before it sold video games, the Japanese company specialized in playing cards.',
+    'The oldest customer complaint dates back to ancient Mesopotamia. In the nearly 4000-year-old cuneiform tablet, a customer claims he was sold inferior copper ingots.',
+    'Baby porcupines are known as porcupettes.',
+    'Forrest Mars, the creator of Peanut M&Ms, was allergic to peanuts.',
+    'The wood frog can hold its pee for up to eight months.',
+
+]
+function newQuote() {
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}

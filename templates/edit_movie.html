@@ -69,8 +69,8 @@
         <div class="row">
             <div class="col s12 center-align">
                 <!-- Button cancel -->
-                <a href="{{ url_for('get_movies') }}" class="btn waves-effect waves-light">Back</a>
-                <button class="btn waves-effect waves-light" type="submit">Edit movie</button>
+                <a href="{{ url_for('library', username=session['user']) }}" class="btn">Back</a>
+                <button class="btn" type="submit">Edit movie</button>
             </div>
         </div>
     </form>

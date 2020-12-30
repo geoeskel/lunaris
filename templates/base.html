@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     {% block styles %}
     {% endblock %}
@@ -22,8 +23,8 @@
     <!-- top navbar -->
    <nav class="nav-extended">
       <div class="nav-wrapper">
-         <a href="{{ url_for('get_movies') }}" class="brand-logo">Lunaris Library</a>
-         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="far fa-moon"></i></a>
+         <a href="{{ url_for('get_movies') }}" class="brand-logo">Lunaris</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
          <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('get_movies') }}">Home</a></li>            
             {% if session.user %}
@@ -32,7 +33,7 @@
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}    
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Sign In</a></li>
+                <li><a href="{{ url_for('register') }}">Sign Up</a></li>
             {% endif %}
          </ul>
       </div>
@@ -40,7 +41,7 @@
 
    <!-- mobile sidenav -->
    <ul class="sidenav" id="mobile-demo">
-        <li><h4 class="center-align light-blue-text text-darken-4">Lunaris Library</h4></li>
+        <li><h3 class="center-align light-blue-text">Lunaris Library</h3></li>
         <li><a href="{{ url_for('get_movies') }}">Home</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('add_movie') }}">Add Movie</a></li>
@@ -48,7 +49,7 @@
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}    
             <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Sign In</a></li>            
+            <li><a href="{{ url_for('register') }}">Sign Up</a></li>            
         {% endif %}  
    </ul>
 </header>
@@ -59,7 +60,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flash_messages">
-                        <h4 class="center-align flash">{{ message }}</h4>
+                        <h4 class="center-align flash animate__animated animate__slower">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -76,6 +77,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/fun.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>

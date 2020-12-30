@@ -10,8 +10,7 @@
             </div>
         </div> 
     </div>
-
-    <h3 class="center-align title">Your Movies</h3>
+   
     {% for movie in movies %}
         {% if session.user|lower == movie.created_by|lower %}
     <ul class="collapsible">
@@ -34,4 +33,13 @@
 
     </ul>
    {% endfor %}
+   <div class="row card-panel">
+        <div id="quoteDisplay">
+        </div>
+        <br>
+        <button class="btn center-align" onclick="newQuote()">Fact Button!</button>
+        <p>Since we are in a library, would youy like to learn something?   </p>
+   </div>
+        
+	    
 {% endblock %}
