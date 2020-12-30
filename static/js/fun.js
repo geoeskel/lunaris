@@ -1,4 +1,4 @@
-var quotes = [
+var facts = [
     'In the 18th century, wealthy British landowners hired ornamental hermits to live in their gardens.',
     'We invented booze before we invented the wheel.',
     'Beethoven went out of his way to ensure his morning coffee was made with exactly 60 beans per cup.',
@@ -27,7 +27,7 @@ var quotes = [
     'The word dude originated in the 1800s as an insult to men overly concerned with the latest fashion trends.',
     'Pentheraphobia is the intense and disproportionate fear of your mother-in-law.',
     'The towns of Baarle straddle the Dutch-Belgian border. In some places, the official border line cuts through houses and cafes.',
-    'A cough can propel saliva droplets as far as 20 feet at speeds up to 40 to 80 km/h.',
+    'A cough can propel saliva droplets as far as 7 meters at speeds up to 40 to 80 km/h.',
     'There was a third Apple founder. Ronald Wayne sold his 10 percent stake for $800 in 1976.',
     'Nintendo was founded in 1889. Before it sold video games, the Japanese company specialized in playing cards.',
     'The oldest customer complaint dates back to ancient Mesopotamia. In the nearly 4000-year-old cuneiform tablet, a customer claims he was sold inferior copper ingots.',
@@ -36,7 +36,7 @@ var quotes = [
     'The wood frog can hold its pee for up to eight months.',
 
 ]
-function newQuote() {
-	var randomNumber = Math.floor(Math.random() * (quotes.length));
-	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+function newFact() {
+	var randomNumber = Math.floor(Math.random() * (facts.length));
+	document.getElementById('fact').innerHTML = facts[randomNumber];
 }

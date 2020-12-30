@@ -114,26 +114,7 @@ input {
     text-shadow: 1px 1px 1px #FBEBD0;
 }
 
-.btn:visited {
-    background-color: #F79F45;
-    color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    
-}
 
-.btn-small:visited {
-    margin: 5px;
-    background-color: #F79F45;
-    color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    
-}
-
-.btn-large:visited {
-    background-color: #F79F45;
-    color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    
 }
 
 .btn:focus {
@@ -203,7 +184,10 @@ input {
     padding-top: 10px;
 }
 
-#quoteDisplay {
+#fact {
+    background-color: #CC9E7E;
+    padding: 5px;
+    color: #0D1F1F;
     font-style: italic;
 }
 
