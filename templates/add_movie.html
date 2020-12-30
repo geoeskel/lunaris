@@ -29,8 +29,8 @@
         <!-- Pick source -->
         <div class="row">
             <div class="input-field col s12 m6">
-                <select class="validate" id="source_name" name="source_name" required>
-                    <option value="" disabled selected>Where can you watch the movie?</option>
+                <select multiple class="validate" id="source_name" name="source_name" required>
+                    <option value="" disabled>Where can you watch the movie?</option>
                     {% for source_name in source_name %}
                     <option value="{{ source_name.source_name }}" class="left">{{ source_name.source_name }}</option>
                     {% endfor %}
