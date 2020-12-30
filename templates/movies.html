@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}   
-
-    <h3 class="center-align title animate__animated animate__flipInX">All Movies</h3> 
-
+    
     <div class="row card-panel">
         <h4 class="center-align">Welcome to Lunaris Library</h4>        
         <p class="center-align">Add your favourite movies & series, you'll never forget them again!</p>   
@@ -19,6 +17,8 @@
                 </div>
             </form>
     </div>
+
+    <h3 class="center-align title animate__animated animate__flipInX">All Movies</h3> 
 
     {% if movies|length > 0 %}
     <ul class="collapsible">
