@@ -53,7 +53,7 @@ input {
     background-color: #F79F45;
     color: #0D1F1F;
     font-family: 'Cinzel', serif;
-    
+    margin: 5px;
 }
 
 .btn-small {
@@ -76,6 +76,7 @@ input {
     color: #FBEBD0;
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
 }
 
 .btn-small:hover {
@@ -98,6 +99,7 @@ input {
     color: #FBEBD0;
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
 }
 
 .btn-small:active {
@@ -115,29 +117,24 @@ input {
     text-shadow: 1px 1px 1px #FBEBD0;
 }
 
-
-}
-
 .btn:focus {
     background-color: #F79F45;
     color: #0D1F1F;
     font-family: 'Cinzel', serif;
-    
+    margin: 5px;    
 }
 
 .btn-small:focus {
     margin: 5px;
     background-color: #F79F45;
     color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    
+    font-family: 'Cinzel', serif;    
 }
 
 .btn-large:focus {
     background-color: #F79F45;
     color: #0D1F1F;
-    font-family: 'Cinzel', serif;
-    
+    font-family: 'Cinzel', serif;    
 }
 
 .btn:focus-within {
@@ -145,6 +142,7 @@ input {
     color: #FBEBD0;
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px 1px #FBEBD0;
+    margin: 5px;
 }
 
 .btn-small:focus-within  {
@@ -166,14 +164,12 @@ input {
     color: #FBEBD0;
     -webkit-text-stroke: 1px #FBEBD0;
     text-shadow: 5px 5px 5px #0D1F1F;
-
 }
 
 .flash {
     color: #FBEBD0;
     text-shadow: 3px 3px 3px #F79F45;
-    animation: heartBeat;
-    
+    animation: heartBeat;    
 }
 
 .foot {
@@ -188,8 +184,7 @@ input {
 #fact {
     background-color: #CC9E7E;
     padding: 5px;
-    color: #0D1F1F;
-    font-style: italic;
+    color: #0D1F1F;        
 }
 
 .dropdown-content li>a, .dropdown-content li>span {

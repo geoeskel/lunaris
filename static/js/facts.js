@@ -32,8 +32,26 @@ var facts = [
     'Nintendo was founded in 1889. Before it sold video games, the Japanese company specialized in playing cards.',
     'The oldest customer complaint dates back to ancient Mesopotamia. In the nearly 4000-year-old cuneiform tablet, a customer claims he was sold inferior copper ingots.',
     'Baby porcupines are known as porcupettes.',
-    'Forrest Mars, the creator of Peanut M&Ms, was allergic to peanuts.',
+    'Forrest Mars, the creator of Peanut M&M’s, was allergic to peanuts.',
     'The wood frog can hold its pee for up to eight months.',
+    'Winston Churchill’s mother was born in Brooklyn.',
+    'Ben Franklin’s formal education ended at 10 years old.',
+    'A “contronym” is a word that’s its own opposite. For example: if you seed the lawn you add seeds, but if you seed a tomato you remove them.',
+    'Viking men wore makeup.',
+    'Marie Curie’s notebooks are still radioactive.',
+    'Continental plates drift as fast as fingernails grow.',
+    'The paint that coats the White House and Buckingham Palace is made by the same German company.',
+    'Alexander Graham Bell, who invented the telephone in 1876, suggested answering calls with "ahoy."',
+    'In 1907, an ad campaign for Kellogg’s Corn Flakes offered a free sample of cereal to any woman who would wink at her grocer.',
+    'Elvis Presley’s manager sold “I Hate Elvis” badges as a way to make money off of people who weren’t buying his merchandise.',
+    'Sea cucumbers eat with their feet.',
+    'Opossums don’t "play dead." When frightened, they become overexcited and pass out.',
+    'The Eiffel Tower leans slightly toward the shade on sunny days.',
+    'On average, people in India spend 10 hours and 42 minutes a week reading, the most time of any country on Earth.',
+    'Nostrils take turns receiving the majority of the air you breathe, which explains why one is usually stuffier than the other.',
+    'The Karni Mata Temple in Deshnoke, India, is home to 20,000 rats who are believed to be descended from an incarnation of the Hindu goddess Durga.',
+    'The first pair of Nike running shoes was made in a waffle iron.'
+    
 
 ]
 function newFact() {
