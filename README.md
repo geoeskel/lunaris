@@ -10,7 +10,7 @@ This project aims to create a database of movies and series. It allows user to a
 I wanted the website to have a calm, cozy, and comfortable theme. It should resemble a library: delicate contrasts and toned colors. I used the below tool to create the website theme:
 https://coolors.co/fbebd0-f79f45-0d1f1f-6c231d-cc9e7e 
 1.	Colour Scheme
-The 5 colors used are: Papaya Whip, Deep Saffron, Dark Jungle Green, Persian Plum, and Antique Brass
+- The 5 colors used are: Papaya Whip, Deep Saffron, Dark Jungle Green, Persian Plum, and Antique Brass
 
 2.	Typography
 The Cinzel font is the main font used throughout the whole project. It is a simple-looking, all caps font that works well with the website’s design; it is both attractive and appropriate
