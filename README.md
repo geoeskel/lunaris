@@ -1,6 +1,6 @@
 ![alt text](https://github.com/geoeskel/lunaris/blob/master/static/documentation/wireframes/end_effect.JPG?raw=true)
 
-# /godoor JavaScript game
+# Lunaris Library
 Data Centric Development - Code Institute project
 
 This project aims to create a database of movies and series. It allows user to add their favorite movies & series, rate, categorize, and specify the service where they can be watched
