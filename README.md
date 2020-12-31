@@ -10,13 +10,13 @@ This project aims to create a database of movies and series. It allows user to a
 I wanted the website to have a calm, cozy, and comfortable theme. It should resemble a library: delicate contrasts and toned colors. I used the below tool to create the website theme:
 https://coolors.co/fbebd0-f79f45-0d1f1f-6c231d-cc9e7e 
 1.	Colour Scheme
-•	The 5 colors used are: Papaya Whip, Deep Saffron, Dark Jungle Green, Persian Plum, and Antique Brass
+The 5 colors used are: Papaya Whip, Deep Saffron, Dark Jungle Green, Persian Plum, and Antique Brass
 
 2.	Typography
-•	The Cinzel font is the main font used throughout the whole project. It is a simple-looking, all caps font that works well with the website’s design; it is both attractive and appropriate
+The Cinzel font is the main font used throughout the whole project. It is a simple-looking, all caps font that works well with the website’s design; it is both attractive and appropriate
 
 3.	Imagery
-•	The background image works well with the rest of the design and allow for good color contrast. It gives the website a calm, aesthetic look.
+The background image works well with the rest of the design and allow for good color contrast. It gives the website a calm, aesthetic look.
 
 
 # UX
@@ -25,26 +25,26 @@ This database is designed for anyone who would wish to systematize their knowled
 ## User stories
 
 1.	First Time Visitor Goals
-•	As a first-time visitor, I want to easily navigate through the website to be able to easily access all of its features
-•	As a first-time visitor, I want to be able to immediately see what the website is about
-•	As a first-time visitor, I want to be able to create an account
-•	As a first-time visitor, I want to be able to log in with my new account
-•	As a first-time visitor, I want to be able to explore the dashboard easily
-•	As a first-time user, I want to be able to add a movie to the database
-•	As a first-time user, I want to be able to search for movies 
-•	As a first-time user, I want to be able to log out when I am done
-•	As a first-time user, I want my personal details to be private and kept away from the reports
+As a first-time visitor, I want to easily navigate through the website to be able to easily access all of its features
+As a first-time visitor, I want to be able to immediately see what the website is about
+As a first-time visitor, I want to be able to create an account
+As a first-time visitor, I want to be able to log in with my new account
+As a first-time visitor, I want to be able to explore the dashboard easily
+As a first-time user, I want to be able to add a movie to the database
+As a first-time user, I want to be able to search for movies 
+As a first-time user, I want to be able to log out when I am done
+As a first-time user, I want my personal details to be private and kept away from the reports
 
 2.	Returning Visitors Goals
-•	As a returning user, I want to be able to log in easily
-•	As a returning user, I want to be able to do all the things as stated in a new user with the same ease
-•	As a returning user, I want to see my own movies and series
-•	As a returning user, I want to be able to add a movie to my collection
-•	As a returning user, I want to be able to modify my movies
-•	As a returning user, I want to be able to delete my movies
+As a returning user, I want to be able to log in easily
+As a returning user, I want to be able to do all the things as stated in a new user with the same ease
+As a returning user, I want to see my own movies and series
+As a returning user, I want to be able to add a movie to my collection
+As a returning user, I want to be able to modify my movies
+As a returning user, I want to be able to delete my movies
 
 3.	Frequent Visitor Goals
-• As a frequent visitor, I would like to see if there are any new updates and features
+As a frequent visitor, I would like to see if there are any new updates and features
 
  
 # Wireframes
@@ -111,21 +111,21 @@ This database is designed for anyone who would wish to systematize their knowled
 I picked MongoDB for my project as it was the preferred database during the course and it can handle large quantities of data and I am expecting huge amounts of titles added 
 
 In MongoDB my collections are: 
-•	source
-•	genre
-•	movies
-•	ratings
-•	users
+source
+genre
+movies
+ratings
+users
 They store a mixture of strings and binaries. I hashed all of my passwords.
 
 # Defensive Features
 
-•	If the user tries to add a movie without a title, a message is displayed asking to add a title
-•	If a user tries to delete a movie, a confirmation form is displayed, asking them to confirm
-•	If a user tries to create an account whose username or password does not match the minimum criteria, a message is displayed asking match the format requested
-•	A new user cannot use the same username as the existing user. If they try this, a flash message is displayed (username already exists)
-•	If a user provides an incorrect password, a flash message is displayed (the username/password are incorrect. Please try again)
-•	The passwords are hashed and a different salt is generated each time a password is made/changed. If anyone hacks into the database, they will not be able to see the passwords
+If the user tries to add a movie without a title, a message is displayed asking to add a title
+If a user tries to delete a movie, a confirmation form is displayed, asking them to confirm
+If a user tries to create an account whose username or password does not match the minimum criteria, a message is displayed asking match the format requested
+A new user cannot use the same username as the existing user. If they try this, a flash message is displayed (username already exists)
+If a user provides an incorrect password, a flash message is displayed (the username/password are incorrect. Please try again)
+The passwords are hashed and a different salt is generated each time a password is made/changed. If anyone hacks into the database, they will not be able to see the passwords
 
 # Technologies Used
 
