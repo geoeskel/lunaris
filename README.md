@@ -6,7 +6,7 @@ Data Centric Development - Code Institute project
 This project aims to create a database of movies and series. It allows user to add their favorite movies & series, rate, categorize, and specify the service where they can be watched
 
 
-## Design 
+# Design 
 I wanted the website to have a calm, cozy, and comfortable theme. It should resemble a library: delicate contrasts and toned colors. I used the below tool to create the website theme:
 https://coolors.co/fbebd0-f79f45-0d1f1f-6c231d-cc9e7e 
 1.	Colour Scheme
@@ -19,10 +19,10 @@ https://coolors.co/fbebd0-f79f45-0d1f1f-6c231d-cc9e7e
 •	The background image works well with the rest of the design and allow for good color contrast. It gives the website a calm, aesthetic look.
 
 
-## UX
+# UX
 This database is designed for anyone who would wish to systematize their knowledge of various movies and series and access it from one location. It has plenty of room for improvement
 
-# User stories
+## User stories
 
 1.	First Time Visitor Goals
 •	As a first-time visitor, I want to easily navigate through the website to be able to easily access all of its features
@@ -47,7 +47,7 @@ This database is designed for anyone who would wish to systematize their knowled
 • As a frequent visitor, I would like to see if there are any new updates and features
 
  
-## Wireframes
+# Wireframes
 
 1.	Plan #1: https://github.com/geoeskel/lunaris/blob/master/static/documentation/wireframes/plan%231.jpg?raw=true
 2.	Plan #2: https://github.com/geoeskel/lunaris/blob/master/static/documentation/wireframes/plan%232.jpg?raw=true
@@ -56,36 +56,36 @@ This database is designed for anyone who would wish to systematize their knowled
 
 
 
-## Features
+# Features
 
-# Navbar 
+## Navbar 
 1.	Responsive navbar with a book icon ‘hamburger’ on devices with a screen width smaller than 992px 
 2.	Each link will take the user to the designated pages
 3.	There are links for the home page, login page, and signup page when the user is not logged in
 4.	When the user logs in, the additional links appear: add a movie, my library, log out
 5.	The ‘Lunaris Library’ link will take the user back to the home page
 
-# Footer
+## Footer
 1.	A copyright is added to the footer
 
-# Home
+## Home
 1.	There is a welcome message on top of the Home page
 2.	User can search the titles using title name, genre, title location, or the user ratings
 3.	There is a list of all the movies added by all users below the search field
 
-# Login
+## Login
 1.	A form to input user details that will allow them to log in
 2.	A button that will submit the form.
 3.	If the user inputs an incorrect email or password, then a message will flash underneath the heading giving the user feedback.
 4.	After successful login, a flash message is displayed on the top of the page welcoming the user back
 5.	There is a link to the signup page in case the user doesn't yet have an account
 
-# Signup
+## Signup
 1.	A form to fill in to register an account
 2.	There is a link to the login page in case the user already has an account
 3.	Once signed up, the user is redirected to their profile page
 
-# Add movie
+## Add movie
 1.	A form to fill in to add the title to the user’s library: 
   a.	Title field 
   b.	Genre (pick from the drop-down menu)
@@ -93,7 +93,7 @@ This database is designed for anyone who would wish to systematize their knowled
   d.	User’s rating (pick from drop down menu)
 2.	Once the title is added, the user is redirected to the home page where they can see the title they added on the bottom of the title list
 
-# My Library
+## My Library
 1.	A welcome message saying ‘users’ profile
 2.	A list of all the titles the user has added
 3.	User can edit/delete the titles they added
@@ -101,12 +101,12 @@ This database is designed for anyone who would wish to systematize their knowled
 5.	User can edit the title; the form looks identical to the one they used to add a title. Once they click on the Edit button, the flash message is displayed confirming that the movie has been edited. Once they click the Back button, they are redirected to the My Library page
 6.	Under the movie list is the Fact Button. Once clicked, a randomly generated interesting fact is displayed 
 
-# Log Out
+## Log Out
 1.	After the user logs out, a flash message is displayed, confirming the action
 
 
 
-### Data Integration
+# Data Integration
 
 I picked MongoDB for my project as it was the preferred database during the course and it can handle large quantities of data and I am expecting huge amounts of titles added 
 
@@ -118,7 +118,7 @@ In MongoDB my collections are:
 •	users
 They store a mixture of strings and binaries. I hashed all of my passwords.
 
-## Defensive Features
+# Defensive Features
 
 •	If the user tries to add a movie without a title, a message is displayed asking to add a title
 •	If a user tries to delete a movie, a confirmation form is displayed, asking them to confirm
@@ -127,38 +127,38 @@ They store a mixture of strings and binaries. I hashed all of my passwords.
 •	If a user provides an incorrect password, a flash message is displayed (the username/password are incorrect. Please try again)
 •	The passwords are hashed and a different salt is generated each time a password is made/changed. If anyone hacks into the database, they will not be able to see the passwords
 
-## Technologies Used
+# Technologies Used
 
-# Front-end
+## Front-end
 1.	HTML
 2.	CSS
 3.	Javascript
 
-# Back-end
+## Back-end
 1.	Python
 2.	MongoDB Atlas
 
-# Frameworks
+## Frameworks
 1.	Materialize 1.0.0
 2.	Flask
 3.	Jinja
 4.	jQuery
 
-## Testing
+# Testing
 
 JSHint Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/js_validator.JPG
 W3C CSS Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/css_validator.JPG
 PEP8 Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/pep8_validator.JPG
 Google Lighthouse check: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/lighthouse_check.JPG
 
-# Basic test
+## Basic test
 1.	Nav has been fully tested
 2.	I have checked that the collapsible open and close appropriately
 3.	I have checked buttons enable and disable appropriately
 4.	I have checked that the correct form options are unhidden based on the user's previous inputs
 5.	All tests were done on PC and Mobile view
 
-# Feedback from users
+## Feedback from users
 -	“I would change ‘Sign-In’ to ‘Register’ or it’s a bit confusing.”
 Regarding this, I have changed the sign in to sign up to avoid confusion.
 
@@ -181,7 +181,7 @@ I have added a margin to the buttons for the view to be more clear and less clat
 I have amended the dropdown menu to allow multiple selections when choosing the title source
 
 
-## User stories
+# User stories
 
 First time user #1:
 As a first-time user, I want to easily navigate through the website be able to easily access all of its features.	I expect all of the links to be working and in an intuitive position.	All the links take me to their destination and none are broken
@@ -201,9 +201,9 @@ As a returning user, I want to be able to add a title to my collection.	I expect
 First time user #3:
 As a returning user, I want to be able to delete my titles	I expect to pick a movie, click delete and see a confirmation form	On my profile page I can see all the titles I added. Once I select one and click Delete I can see the confirmation form ‘are you sure you want to delete’. Once I confirm, my title is deleted
 
-## Deployment
+# Deployment
 
-# Running app in Heroku.
+## Running app in Heroku.
 Create a Heroku account. Click to start a new app. Pick your location based on the closest free version (or paid version) to your actual location. For this project it was Europe. Choose an appropriate name for the app and click to create.
 
 Once your app has been created, then move to the ‘deploy’ tab. You can connect to GitHub through one of the tabs. I, however, have used the CLI. You can link to an existing repository by using the following command in your IDE:
@@ -237,7 +237,7 @@ $ git push -u Heroku master
 
 
 
-## Credit
+# Credit
 
 I mostly based my project on the tutorials provided by the Code Institute Data Centric Development Mini Project
 
@@ -247,7 +247,7 @@ Additional resources:
 -	Wallpaper was downloaded from https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg 
 -	https://www.w3schools.com/tags/att_input_pattern.asp#:~:text=The%20pattern%20attribute%20specifies%20a,pattern%20to%20help%20the%20user
 
-## Acknowledgements
+# Acknowledgements
 
 1. The initial inspiration came from my WhatsApp condeinstitute group for which I am very grateful! Also a bit thank you for assistance in testing and ideas on how to improve my project.	
 2. My Mentor for continuous helpful feedback.
