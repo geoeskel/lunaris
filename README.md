@@ -13,10 +13,10 @@ https://coolors.co/fbebd0-f79f45-0d1f1f-6c231d-cc9e7e
 - The 5 colors used are: Papaya Whip, Deep Saffron, Dark Jungle Green, Persian Plum, and Antique Brass
 
 2.	Typography
-The Cinzel font is the main font used throughout the whole project. It is a simple-looking, all caps font that works well with the website’s design; it is both attractive and appropriate
+- The Cinzel font is the main font used throughout the whole project. It is a simple-looking, all caps font that works well with the website’s design; it is both attractive and appropriate
 
 3.	Imagery
-The background image works well with the rest of the design and allow for good color contrast. It gives the website a calm, aesthetic look.
+- The background image works well with the rest of the design and allow for good color contrast. It gives the website a calm, aesthetic look.
 
 
 # UX
@@ -25,26 +25,26 @@ This database is designed for anyone who would wish to systematize their knowled
 ## User stories
 
 1.	First Time Visitor Goals
-As a first-time visitor, I want to easily navigate through the website to be able to easily access all of its features
-As a first-time visitor, I want to be able to immediately see what the website is about
-As a first-time visitor, I want to be able to create an account
-As a first-time visitor, I want to be able to log in with my new account
-As a first-time visitor, I want to be able to explore the dashboard easily
-As a first-time user, I want to be able to add a movie to the database
-As a first-time user, I want to be able to search for movies 
-As a first-time user, I want to be able to log out when I am done
-As a first-time user, I want my personal details to be private and kept away from the reports
+- As a first-time visitor, I want to easily navigate through the website to be able to easily access all of its features
+- As a first-time visitor, I want to be able to immediately see what the website is about
+- As a first-time visitor, I want to be able to create an account
+- As a first-time visitor, I want to be able to log in with my new account
+- As a first-time visitor, I want to be able to explore the dashboard easily
+- As a first-time user, I want to be able to add a movie to the database
+- As a first-time user, I want to be able to search for movies 
+- As a first-time user, I want to be able to log out when I am done
+- As a first-time user, I want my personal details to be private and kept away from the reports
 
 2.	Returning Visitors Goals
-As a returning user, I want to be able to log in easily
-As a returning user, I want to be able to do all the things as stated in a new user with the same ease
-As a returning user, I want to see my own movies and series
-As a returning user, I want to be able to add a movie to my collection
-As a returning user, I want to be able to modify my movies
-As a returning user, I want to be able to delete my movies
+- As a returning user, I want to be able to log in easily
+- As a returning user, I want to be able to do all the things as stated in a new user with the same ease
+- As a returning user, I want to see my own movies and series
+- As a returning user, I want to be able to add a movie to my collection
+- As a returning user, I want to be able to modify my movies
+- As a returning user, I want to be able to delete my movies
 
 3.	Frequent Visitor Goals
-As a frequent visitor, I would like to see if there are any new updates and features
+- As a frequent visitor, I would like to see if there are any new updates and features
 
  
 # Wireframes
@@ -111,21 +111,21 @@ As a frequent visitor, I would like to see if there are any new updates and feat
 I picked MongoDB for my project as it was the preferred database during the course and it can handle large quantities of data and I am expecting huge amounts of titles added 
 
 In MongoDB my collections are: 
-source
-genre
-movies
-ratings
-users
+- source
+- genre
+- movies
+- ratings
+- users
 They store a mixture of strings and binaries. I hashed all of my passwords.
 
 # Defensive Features
 
-If the user tries to add a movie without a title, a message is displayed asking to add a title
-If a user tries to delete a movie, a confirmation form is displayed, asking them to confirm
-If a user tries to create an account whose username or password does not match the minimum criteria, a message is displayed asking match the format requested
-A new user cannot use the same username as the existing user. If they try this, a flash message is displayed (username already exists)
-If a user provides an incorrect password, a flash message is displayed (the username/password are incorrect. Please try again)
-The passwords are hashed and a different salt is generated each time a password is made/changed. If anyone hacks into the database, they will not be able to see the passwords
+- If the user tries to add a movie without a title, a message is displayed asking to add a title
+- If a user tries to delete a movie, a confirmation form is displayed, asking them to confirm
+- If a user tries to create an account whose username or password does not match the minimum criteria, a message is displayed asking match the format requested
+- A new user cannot use the same username as the existing user. If they try this, a flash message is displayed (username already exists)
+- If a user provides an incorrect password, a flash message is displayed (the username/password are incorrect. Please try again)
+- The passwords are hashed and a different salt is generated each time a password is made/changed. If anyone hacks into the database, they will not be able to see the passwords
 
 # Technologies Used
 
@@ -146,10 +146,10 @@ The passwords are hashed and a different salt is generated each time a password 
 
 # Testing
 
-JSHint Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/js_validator.JPG
-W3C CSS Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/css_validator.JPG
-PEP8 Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/pep8_validator.JPG
-Google Lighthouse check: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/lighthouse_check.JPG
+- JSHint Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/js_validator.JPG
+- W3C CSS Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/css_validator.JPG
+- PEP8 Validator: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/pep8_validator.JPG
+- Google Lighthouse check: https://github.com/geoeskel/lunaris/blob/master/static/documentation/validators/lighthouse_check.JPG
 
 ## Basic test
 1.	Nav has been fully tested
@@ -183,22 +183,22 @@ I have amended the dropdown menu to allow multiple selections when choosing the 
 
 # User stories
 
-First time user #1:
+- First time user #1:
 As a first-time user, I want to easily navigate through the website be able to easily access all of its features.	I expect all of the links to be working and in an intuitive position.	All the links take me to their destination and none are broken
 
-First time user #2:
+- First time user #2:
 As a first-time user, I want to be able to immediately see what the website is about.	I expect information about the website to be ready available on the landing page without needed to click a button	The purpose is very close to the top and the home page gives me all the information I need
 
-First time user #3:
+- First time user #3:
 As a first-time user, I want to be able to search titles.	I expect to click on the search form to fill in the details and find the title	I can search by movie title, genre, rating and source
 
-First time user #1:
+- Returning user #1:
 As a returning user, I want to be able to log in easily. I expect to find the login button easily and be able to fill in the form to login.	I could find the login button easily in the nav bar and the form is very quick to fill in. Once I have logged in I am taken to my profile page
 
-First time user #2:
+- Returning user #2:
 As a returning user, I want to be able to add a title to my collection.	I expect to add a movie and then find it in my profile page	When I click on the Add Movie link, it takes me to the form I can fill in to add a title. Once it is done, I can see the title on my profile page and in the Home page
 
-First time user #3:
+- Returning user #3:
 As a returning user, I want to be able to delete my titles	I expect to pick a movie, click delete and see a confirmation form	On my profile page I can see all the titles I added. Once I select one and click Delete I can see the confirmation form ‘are you sure you want to delete’. Once I confirm, my title is deleted
 
 # Deployment
